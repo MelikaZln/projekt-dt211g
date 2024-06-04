@@ -1,0 +1,21 @@
+{
+  "name": "dt211g-new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.9",
+    "gulp": "^4.0.2",
+    "gulp-remove-html-comments": "^1.0.1",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.71.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

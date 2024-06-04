@@ -1,0 +1,205 @@
+@use 'base';
+@use 'keyframes';
+
+@mixin add-text-shadow($font-size, $color) {
+  font-size: $font-size;
+
+  @if $font-size > 40px {
+    text-shadow: 2px 2px $color;
+  }
+}
+
+h1{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 46px;
+  @media screen and (max-width: base.$breakpoint-small) {
+      font-size: 26px;
+    }
+    
+    @media screen and (min-width: base.$breakpoint-small) and (max-width: base.$breakpoint-medium) {
+      font-size: 38px;
+    }
+}
+
+
+div{
+  img{
+      width: 700px; 
+      display: flex;
+      flex-direction: row;
+      margin-left: auto;
+      margin-right: auto;
+
+      margin-bottom: 80px;
+      @media screen and (min-width: base.$breakpoint-small) and (max-width: base.$breakpoint-medium) {
+          width: 400px; 
+          margin-bottom: 40px;
+        }
+      @media screen and (max-width: base.$breakpoint-small) {
+          width: 250px; 
+          margin-bottom: 20px;
+        }
+  }
+  
+}
+.proContainer {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #000000;
+  border-radius: 50px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+  @media screen and (min-width: base.$breakpoint-small) and (max-width: base.$breakpoint-medium) {
+    width: 500px;
+  }
+  @media screen and (max-width: base.$breakpoint-small) {
+    width: 250px;
+  }
+  .proTitelContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .proTitel{
+        background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+        background-size: cover;
+        color: transparent;
+        background-clip: border-box;
+        -moz-background-clip: text;
+        -webkit-background-clip: text;
+        text-transform: uppercase;
+        font-size: 80px;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 10px 0;
+        @media screen and (min-width: base.$breakpoint-small) and (max-width: base.$breakpoint-medium) {
+          font-size: 60px;
+        }
+        @media screen and (max-width: base.$breakpoint-small) {
+          font-size: 30px;
+        }
+    }
+  }
+  @keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+.proButton{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 8%;
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #e505b8, #f47543);
+  color: #000000;
+  border: none;
+  border-radius: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  background-size: 200% auto;
+  animation: gradient-animation 2s ease infinite; 
+  transition: transform 0.3s ease; 
+  @media screen and (min-width: base.$breakpoint-small) and (max-width: base.$breakpoint-medium) {
+    font-size: 18px;
+
+    margin-left: 3%;
+  }
+  @media screen and (max-width: base.$breakpoint-small) {
+    font-size: 16px;
+    margin-left: 1%;
+  }
+}
+.proButton:hover{
+  transform: scale(1.3);
+}
+.proImage{
+  width: 300px;
+  margin-top: 15px;
+  cursor: pointer;
+  @media screen and (min-width: base.$breakpoint-small) and (max-width: base.$breakpoint-medium) {
+   width: 200px;
+  }
+  @media screen and (max-width: base.$breakpoint-small) {
+    width: 150px;
+  }
+}
+.proImage:hover{
+  animation: rotationChange 5s 0s infinite alternate;
+  
+}
+.proInput{
+  border-radius: 40px;
+  width: 350px;
+  background-color: antiquewhite;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-left: 18%;
+ 
+  @media screen and (min-width: base.$breakpoint-small) and (max-width: base.$breakpoint-medium) {
+    width: 250px;
+    margin-left: 10%;
+   }
+   @media screen and (max-width: base.$breakpoint-small) {
+     width: 150px;
+     margin-left: -20px;
+     margin-bottom: 0px;
+     margin-top: -50px;
+   }
+}
+.containetIputPro{
+  display: inline-block;
+  margin-left: 20%;
+  margin-right: 500px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+.buttonContainerPro{
+  margin-left: 18%;
+}
+.proMap{
+  height: 550px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 30px;
+  @media screen and (min-width: base.$breakpoint-small) and (max-width: base.$breakpoint-medium) {
+    height: 350px;
+   }
+   @media screen and (max-width: base.$breakpoint-small) {
+    height: 350px;
+     margin-left: 0%;
+     margin-bottom: 0px;
+   }
+}
+.weatherPro{
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  color: antiquewhite;
+  @media screen and (min-width: base.$breakpoint-small) and (max-width: base.$breakpoint-medium) {
+    font-size: 30px;
+   }
+   @media screen and (max-width: base.$breakpoint-small) {
+    font-size: 26px;
+   }
+}
+.timezonePro{
+  margin-top: 10px;
+  padding: 10px;
+  color: antiquewhite;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  @media screen and (min-width: base.$breakpoint-small) and (max-width: base.$breakpoint-medium) {
+    font-size: 30px;
+   }
+   @media screen and (max-width: base.$breakpoint-small) {
+    font-size: 20px;
+   }
+}
+.error{
+  color: red;
+}
+}

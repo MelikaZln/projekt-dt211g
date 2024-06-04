@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Time Zone Viewer</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body style="background-color: black;     margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;">
+    <div class="proContainer">
+        <div class="proTitelContainer"><h1 class="proTitel">Information om önskad stad!</h1></div>
+        <img alt="jorden" src="images/jorden.avif" class="proImage">
+        <div class="containetIputPro">
+            <input type="text" id="cityInput" class="proInput" placeholder="Skriv in en stad...">
+        </div>
+        <div class="buttonContainerPro">        
+            <button class="proButton" onclick="showCityOnMap()">Karta</button>
+            <button class="proButton" onclick="getTimezone()">Timezone</button>
+            <button class="proButton" onclick="getWeather()">Väder</button>
+        </div>
+        <div class="resultContainerPro">
+            
+            <div id="map" class="proMap"></div>
+            
+            <div id="timezone-info" class="timezonePro"></div>
+            
+            <div id="weather-info" class="weatherPro"></div>
+
+        </div>
+    </div>
+    
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
